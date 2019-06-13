@@ -19,7 +19,9 @@ export class MainPageComponent implements OnInit {
         query: gql`
           {
             newsAll {
+              author
               title
+              text
             }
           }
         `

@@ -1,5 +1,14 @@
 html,
 body,
 .view {
-  height: 250px;
+  height: 550px;
+}
+.box {
+  float: left;
+  border-radius: 15px 30px;
+  border: solid rgba(128, 128, 128, 0.075);
+  height: 300px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: 10px;
 }

@@ -7,7 +7,7 @@
       <!--Video source-->
       <video class="video-fluid" autoplay loop>
         <source
-          src="https://mdbootstrap.com/img/video/Lines.mp4"
+          src="https://gcs-vimeo.akamaized.net/exp=1560466963~acl=%2A%2F1288399553.mp4%2A~hmac=3f98015688337d67c0ad93808af6cbd0d0bacfc893d477c933a56d4d27e7d53e/vimeo-prod-skyfire-std-us/01/724/13/328624736/1288399553.mp4"
           type="video/mp4"
         />
       </video>
@@ -17,8 +17,8 @@
     <!--Caption-->
     <div class="carousel-caption">
       <div class="animated fadeInDown">
-        <h3 class="h3-responsive">Light mask</h3>
-        <p>First text</p>
+        <h1 class="h1-responsive">Ми розкажемо вам найцікавіше!</h1>
+        <p>Сучасний світ.</p>
       </div>
     </div>
     <!--Caption-->
@@ -31,7 +31,7 @@
       <!--Video source-->
       <video class="video-fluid" autoplay loop>
         <source
-          src="https://mdbootstrap.com/img/video/animation-intro.mp4"
+          src="https://gcs-vimeo.akamaized.net/exp=1560465745~acl=%2A%2F1315929346.mp4%2A~hmac=00fc497c44cb244af6e6d3caaf4edc941feebbc91cd362f0a02a06196fd254a0/vimeo-prod-skyfire-std-us/01/1720/13/333604632/1315929346.mp4"
           type="video/mp4"
         />
       </video>
@@ -41,8 +41,8 @@
     <!--Caption-->
     <div class="carousel-caption">
       <div class="animated fadeInDown">
-        <h3 class="h3-responsive">Super light mask</h3>
-        <p>Secondary text</p>
+        <h1 class="h1-responsive">Міста та Технології</h1>
+        <p>Різноманітні сфери життя</p>
       </div>
     </div>
     <!--Caption-->
@@ -55,7 +55,7 @@
       <!--Video source-->
       <video class="video-fluid" autoplay loop>
         <source
-          src="https://mdbootstrap.com/img/video/cube.mp4"
+          src="https://storage.googleapis.com/coverr-main/mp4%2Fcoverr-volcano-postcard-1559213301682.mp4"
           type="video/mp4"
         />
       </video>
@@ -65,8 +65,8 @@
     <!--Caption-->
     <div class="carousel-caption">
       <div class="animated fadeInDown">
-        <h3 class="h3-responsive">Strong mask</h3>
-        <p>Third text</p>
+        <h1 class="h1-responsive">"Подорожуйте разом з нами</h1>
+        <p>24/7</p>
       </div>
     </div>
     <!--Caption-->
@@ -74,6 +74,10 @@
   <!--/Third slide-->
 </mdb-carousel>
 <!--Carousel Wrapper-->
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block"
+  rel="stylesheet"
+/>
 
 <div *ngIf="loading">
   Loading...
@@ -83,6 +87,11 @@
 </div>
 <div *ngIf="rates">
   <div *ngFor="let rate of rates">
-    <p>{{ rate.title }}</p>
+    <div class="col-6 box">
+      <b>
+        <i italic>{{ rate.title }}</i></b
+      >
+      <p>{{ rate.text }}</p>
+    </div>
   </div>
 </div>
