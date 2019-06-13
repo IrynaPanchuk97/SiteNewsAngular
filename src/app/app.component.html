@@ -1,1 +1,42 @@
-<router-outlet></router-outlet>
+<div class="container page">
+  <div class="border d-none d-md-flex ">
+    <nav class="nav nav-tabs " id="nav-tab" role="tablist">
+      <a
+        class="nav-item nav-link"
+        routerLink="/news"
+        routerLinkActive="active"
+        data-toggle="tab"
+        role="tab"
+      >
+        <i class="far fa-newspaper"></i> Головні новини</a
+      >
+      <a
+        class="nav-item nav-link"
+        routerLink="/sport"
+        routerLinkActive="active"
+        data-toggle="tab"
+        role="tab"
+      >
+        <i class="fas fa-volleyball-ball"></i> Спорт</a
+      >
+      <a
+        class="nav-item nav-link"
+        routerLink="/YouTube"
+        routerLinkActive="active"
+        data-toggle="tab"
+        role="tab"
+      >
+        <i class="fab fa-youtube"></i> YouTube</a
+      >
+    </nav>
+  </div>
+  <div class="tab-content">
+    <div
+      class="tab-pane fade show active"
+      role="tabpanel"
+      aria-labelledby="nav-home-tab"
+    >
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
