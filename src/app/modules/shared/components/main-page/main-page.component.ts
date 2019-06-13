@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { Apollo } from "apollo-angular";
+import gql from "graphql-tag";
 
 @Component({
   selector: "app-main-page",
@@ -6,7 +8,27 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./main-page.component.scss"]
 })
 export class MainPageComponent implements OnInit {
-  constructor() {}
+  rates: any[];
+  loading = true;
+  error: any;
+  constructor(private apollo: Apollo) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.apollo
+      .watchQuery({
+        query: gql`
+          {
+            newsAll {
+              title
+            }
+          }
+        `
+      })
+      .valueChanges.subscribe(result => {
+        console.log(result);
+        this.rates = result.data && result.data.newsAll;
+        this.loading = result.loading;
+        this.error = result.error;
+      });
+  }
 }

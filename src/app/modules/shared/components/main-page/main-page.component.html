@@ -74,3 +74,15 @@
   <!--/Third slide-->
 </mdb-carousel>
 <!--Carousel Wrapper-->
+
+<div *ngIf="loading">
+  Loading...
+</div>
+<div *ngIf="error">
+  Error :(
+</div>
+<div *ngIf="rates">
+  <div *ngFor="let rate of rates">
+    <p>{{ rate.title }}</p>
+  </div>
+</div>
